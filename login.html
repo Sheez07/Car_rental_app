@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CARZY RENTAL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="CARZY Logo">
+            <span class="company-name">CARZY | RENT A CAR</span>
+        </div>
+    </header>
+
+    <section class="auth-container">
+        <div class="form-box">
+            <h2 id="form-title">Sign In</h2>
+
+            <!-- LOGIN FORM -->
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+            </form>
+
+            <!-- SIGNUP FORM -->
+            <form id="signup-form" style="display: none;">
+                <label for="signup-name">Full Name:</label>
+                <input type="text" id="signup-name" required>
+
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required>
+
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="#" id="show-login">Sign In</a></p>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

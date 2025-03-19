@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Car Rental</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+</head>
+<body>
+    <header>
+        <h1>Payment Confirmation</h1>
+    </header>
+
+    <main>
+        <section id="booking-summary">
+            <h2>Booking Details</h2>
+            <p><strong>Car Selected:</strong> <span id="car-name">Loading...</span></p>
+            <p><strong>Price Per Day:</strong> $<span id="car-price">0.00</span></p>
+            <p><strong>Rental Days:</strong> <span id="rental-days">0</span></p>
+            <p><strong>Extras:</strong> <span id="extras-list">None</span></p>
+            <h3>Total Price: $<span id="total-price">0.00</span></h3>
+        </section>
+
+        <section id="payment-section">
+            <h2>Payment Information</h2>
+            <form id="payment-form">
+                <label for="card-name">Name on Card:</label>
+                <input type="text" id="card-name" required>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" maxlength="16" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="month" id="expiry-date" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" maxlength="3" required>
+
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve booking details from localStorage
+            const bookingData = localStorage.getItem("bookingDetails");
+
+            console.log("Retrieved booking data:", bookingData); // Debugging
+
+            if (!bookingData) {
+                alert("No booking found. Please select a car first.");
+                window.location.href = "cars.html";
+                return;
+            }
+
+            // Parse the booking data
+            const booking = JSON.parse(bookingData);
+
+            // Update HTML with booking details
+            document.getElementById("car-name").textContent = booking.car;
+            document.getElementById("car-price").textContent = booking.pricePerDay.toFixed(2);
+            document.getElementById("rental-days").textContent = booking.rentalDays;
+            document.getElementById("total-price").textContent = booking.totalPrice.toFixed(2);
+            document.getElementById("extras-list").textContent = booking.extras.length > 0 ? booking.extras.join(", ") : "None";
+
+            // Handle Payment Form Submission
+            document.getElementById("payment-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                alert("Payment successful! Thank you for your booking.");
+                localStorage.removeItem("bookingDetails"); // Clear booking details after payment
+                window.location.href = "confirmation.html"; // Redirect to confirmation page
+            });
+        });
+    </script>
+</body>
+</html>

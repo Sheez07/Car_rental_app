@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARZY | RENTAL CARS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="CARZY Logo">
+            <span class="company-name">CARZY | RENT A CAR</span>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <div class="home-text">
+                <h1>Rent a <span class="highlight">Car</span> Today<br>Explore Tomorrow</h1>
+                <p>
+                    Experience the <span class="highlight">Freedom</span> of the open road with our wide
+                    range of <span class="highlight">cars</span>
+                </p>
+            </div>
+            <div class="input-box">
+                <form id="rental-form" action="cars.html" method="get">
+                    <div class="input-search">
+                        <label for="location">Location</label><br>
+                        <input type="search" name="location" id="location" placeholder="Search Places" required>
+                    </div>
+                    <div class="pick-up">
+                        <label for="pickup-date">Pick-Up Date</label><br>
+                        <input type="date" name="pickup-date" id="pickup-date" required>
+                    </div>
+                    <div class="return">
+                        <label for="return-date">Return Date</label><br>
+                        <input type="date" name="return-date" id="return-date" required>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

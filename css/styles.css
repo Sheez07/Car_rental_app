@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --primary-color: #cd1f00;
+  --highlight-color: #ffffff; /* Golden Brown color for highlighted text */
+  --text-dark: #333333; /* Dark grey for text */
+  --text-light: #475569;
+  --extra-light: #f2f2f2;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --gradient: linear-gradient(to bottom, #ae1d00, #ad8a20);
+  --background-color: #880000; /* Light grey background */
+  --header-background: #f8f9fa; /* New background color for header */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--background-color); /* Set background color */
+  color: var(--text-dark); /* Set text color */
+}
+
+section {
+  width: 100%;
+  padding: 20px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between elements */
+  flex-direction: row;
+  background: url(car.png
+  ) no-repeat center center/cover; /* Add background image */
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 1.5rem; /* Increase font size */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+button,
+.sign {
+  padding: 10px 20px;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+span.highlight {
+  color: var(--highlight-color); /* Apply highlight color */
+}
+
+input {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark)=;
+  border-radius: 0.3rem;
+  border: 1px solid var(--text-light);
+  padding: 10px;
+  background: rgba(48, 48, 150, 0.1);
+  width: 100%;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+  display: block;
+  color: var(--text-dark); /* Set label text color */
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the logo and text */
+  padding: 0 20px;
+  background: var(--header-background); /* Set new background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the logo and text together */
+  gap: 10px; /* Add spacing between the logo and text */
+}
+
+header img {
+  width: 80px; /* Adjust logo size */
+  height: auto;
+}
+
+header .company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5f3d00; /* Change text color */
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto; /* Center the navigation tabs */
+}
+
+.sign {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .sign-up {
+  background: none;
+  color: var(--primary-color);
+}
+
+header .sign-in {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.home-content {
+  text-align: center;
+  color: var(--white);
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Distribute space between elements */
+  position: relative;
+  z-index: 2; /* Ensure content is above the background image */
+}
+
+.home-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.home-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  margin-top: 100px; /* Adjust this value to move the text lower */
+}
+
+.home-text p {
+  font-size: 1.3rem;
+  width: 500px;
+  margin: 0 auto 20px;
+}
+
+.download img {
+  width: 150px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.download img:hover {
+  transform: scale(1.1);
+}
+
+.input-box {
+  flex: 1;
+  max-width: 400px;
+  background: var(--white);
+  border-radius: 0.3rem;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 100px; /* Move the input box lower */
+  align-items: flex-start; /* Align items to the left */
+  margin-left: 20px; /* Move the input box to the left */
+}
+
+.input-box div {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit button {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit button:hover {
+  background: #a00e00;
+}

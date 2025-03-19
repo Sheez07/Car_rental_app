@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Car</title>
+    <link rel="stylesheet" href="css/cars.css"> <!-- Link to the new CSS file -->
+</head>
+<body>
+    <h1>Select Your Car</h1>
+    <form id="car-selection" action="signin.html" method="get">
+        <label for="car">Choose a Car:</label>
+        <div class="car-options">
+            
+            <!-- Car options here -->
+            <label class="car-option">
+                <input type="radio" name="car" value="50" data-name="Toyota Corolla">
+                <img src="assets/car1.png" alt="Toyota Corolla">
+                Toyota Corolla - $50/day
+            </label>
+            
+            <label class="car-option">
+                <input type="radio" name="car" value="70" data-name="Honda Civic">
+                <img src="assets/car2.png" alt="Honda Civic">
+                Honda Civic - $70/day
+            </label>
+            <!-- Car 3 -->
+            <label class="car-option">
+                <input type="radio" name="car" value="90" data-name="BMW 3 Series">
+                <img src="assets/car3.png" alt="BMW 3 Series">
+                BMW 3 Series - $90/day
+            </label>
+            <!-- Car 4 -->
+            <label class="car-option">
+                <input type="radio" name="car" value="120" data-name="Mercedes C-Class">
+                <img src="assets/car4.png" alt="Mercedes C-Class">
+                Mercedes C-Class - $120/day
+            </label>
+            <!-- Car 5 -->
+            <label class="car-option">
+                <input type="radio" name="car" value="60" data-name="Ford Mustang">
+                <img src="assets/car5.png" alt="Ford Mustang">
+                Ford Mustang - $60/day
+            </label>
+            <!-- Car 6 -->
+            <label class="car-option">
+                <input type="radio" name="car" value="80" data-name="Audi A4">
+                <img src="assets/car6.png" alt="Audi A4">
+                Audi A4 - $80/day
+            </label>
+            <!-- Car 7 -->
+            <label class="car-option">
+                <input type="radio" name="car" value="100" data-name="Tesla Model 3">
+                <img src="assets/car7.png" alt="Tesla Model 3">
+                Tesla Model 3 - $100/day
+            </label>
+            <!-- Car 8 -->
+            <label class="car-option">
+                <input type="radio" name="car" value="110" data-name="Jeep Wrangler">
+                <img src="assets/car8.png" alt="Jeep Wrangler">
+                Jeep Wrangler - $110/day
+            </label>
+            <!-- Car 9 -->
+            <label class="car-option">
+                <input type="radio" name="car" value="130" data-name="Porsche 911">
+                <img src="assets/car9.png" alt="Porsche 911">
+                Porsche 911 - $130/day
+            </label>
+            <!-- Car 10 -->
+            <label class="car-option">
+                <input type="radio" name="car" value="140" data-name="Lexus RX">
+                <img src="assets/car10.png" alt="Lexus RX">
+                Lexus RX - $140/day
+            </label>re) -->
+        </div>
+
+        <label for="extras">Extra Services:</label><br>
+        <input type="checkbox" class="extra" value="10"> GPS ($10)<br>
+        <input type="checkbox" class="extra" value="20"> Insurance ($20)<br>
+        <input type="checkbox" class="extra" value="15"> Baby Seat ($15)<br>
+        <input type="checkbox" class="extra" value="25"> Wi-Fi Hotspot ($25)<br>
+        <input type="checkbox" class="extra" value="30"> Additional Driver ($30)<br>
+        <input type="checkbox" class="extra" value="40"> Premium Sound System ($40)<br>
+        
+        <h3>Total Price: $<span id="total-price">0</span></h3>
+        <button type="submit">Confirm Booking</button>
+    </form>
+    
+    <script src="js/cars.js"></script>
+</body>
+</html>
